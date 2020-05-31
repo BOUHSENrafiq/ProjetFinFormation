@@ -15,11 +15,16 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
+import { MapComponent } from './map/map.component';
+import {RouterModule} from '@angular/router';
+import {AppRoutingModule} from './app-routing.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,10 @@ import {MatTableModule} from '@angular/material/table';
     FlexLayoutModule,
     MatButtonModule, MatCardModule, MatIconModule,
     MatPaginatorModule, MatSelectModule, MatSidenavModule,
-    MatSortModule, MatToolbarModule, MatTableModule
+    MatSortModule, MatToolbarModule, MatTableModule,
+    RouterModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
