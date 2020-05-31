@@ -1,0 +1,34 @@
+<div style="height: 100vh;">
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <a mat-button class="companyName" routerLink="/">
+      <span>TrackCov19</span>
+    </a>
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button >HOME</a>
+      <a mat-button >DETAILS</a>
+      <a mat-button >CONTACT US</a>
+    </div>
+
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false">
+
+      <div fxLayout="column">
+        <a mat-button >HOME</a>
+        <a mat-button >DETAILS</a>
+        <a mat-button >CONTACT US</a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
