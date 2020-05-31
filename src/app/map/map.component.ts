@@ -1,15 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MarkerService} from '../services/marker.service';
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.css']
+  styleUrls: [ './map.component.css' ]
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements OnInit{
+  // map options center and zoom.
+  lat1 = 30.409902;
+  lng1 = -9.548401;
+  zoom = 19;
 
-  constructor() { }
+  lat = '';
+  lng = '';
+  marker: object;
+
+  /**
+   * injection of marker service
+   * @param markerService
+   */
+  constructor(
+    private markerService: MarkerService) { }
 
   ngOnInit(): void {
+    // call the function getMarker from the markerService
+    this.markerService.getMarker().subscribe(data => {
+      // show data on the console
+      console.log(data);
+      this.marker = data;
+      this.lng = data.lng;
+      this.lat = data.lat;
+    });
   }
-
 }
+

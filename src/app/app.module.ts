@@ -19,6 +19,7 @@ import { MapComponent } from './map/map.component';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import {AgmCoreModule} from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,11 @@ import {HttpClientModule} from '@angular/common/http';
     MatSortModule, MatToolbarModule, MatTableModule,
     RouterModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      // google maps API key :
+      apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
