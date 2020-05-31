@@ -1,0 +1,13 @@
+<agm-map
+  [latitude]="lat1"
+  [longitude]="lng1"
+  [zoom]="zoom"
+  [streetViewControl]="false">
+
+  <agm-marker
+    *ngFor="let m of marker; let i = index"
+    [latitude]="m.lat"
+    [longitude]="m.lng">
+  </agm-marker>
+
+</agm-map>
