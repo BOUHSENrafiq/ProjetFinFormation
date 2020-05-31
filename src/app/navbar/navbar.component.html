@@ -18,9 +18,9 @@
   <mat-sidenav-container fxFlexFill class="example-container">
     <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false">
       <div fxLayout="column">
-        <a mat-button [routerLink]="['Home']" routerLinkActive="active">HOME</a>
-        <a mat-button [routerLink]="['Details']" routerLinkActive="active">DETAILS</a>
-        <a mat-button [routerLink]="['Contact']" routerLinkActive="active">CONTACT US</a>
+        <a mat-button [routerLink]="['Home']" routerLinkActive="active" (click)="sidenav.close()">HOME</a>
+        <a mat-button [routerLink]="['Details']" routerLinkActive="active" (click)="sidenav.close()">DETAILS</a>
+        <a mat-button [routerLink]="['Contact']" routerLinkActive="active" (click)="sidenav.close()">CONTACT US</a>
       </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
