@@ -10,11 +10,9 @@
     </a>
     <span class="example-spacer"></span>
     <div fxShow="true" fxHide.lt-md="true">
-      <a mat-button routerLink="/about-us">About us</a>
-      <a mat-button routerLink="/prices">Prices</a>
-      <a mat-button routerLink="/start-page">Start page</a>
-      <a mat-button routerLink="/offer">Offer</a>
-      <a mat-button routerLink="/contact">Contact</a>
+      <a mat-button >HOME</a>
+      <a mat-button >DETAILS</a>
+      <a mat-button >CONTACT US</a>
     </div>
 
   </mat-toolbar>
@@ -23,16 +21,13 @@
     <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false">
 
       <div fxLayout="column">
-        <a mat-button routerLink="/about-us">About us</a>
-        <a mat-button routerLink="/prices">Prices</a>
-        <a mat-button routerLink="/start-page">Start page</a>
-        <a mat-button routerLink="/offer">Offer</a>
-        <a mat-button routerLink="/contact">Contact</a>
+        <a mat-button >HOME</a>
+        <a mat-button >DETAILS</a>
+        <a mat-button >CONTACT US</a>
       </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
-      <app-select></app-select>
-      <app-home></app-home>
+
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

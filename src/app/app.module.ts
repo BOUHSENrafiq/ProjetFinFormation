@@ -7,9 +7,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
-import {RouterModule} from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -22,9 +27,12 @@ import {MatIconModule} from '@angular/material/icon';
     NgbModule,
     MatSidenavModule,
     MatButtonModule,
-    RouterModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule,
+    MatButtonModule, MatCardModule, MatIconModule,
+    MatPaginatorModule, MatSelectModule, MatSidenavModule,
+    MatSortModule, MatToolbarModule, MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
