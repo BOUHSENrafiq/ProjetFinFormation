@@ -44,7 +44,7 @@ import {AgmCoreModule} from '@agm/core';
     AppRoutingModule,
     AgmCoreModule.forRoot({
       // google maps API key :
-      apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
+      apiKey: 'AIzaSyDGmsIYfiI7sJZu4Et8fhuyfOsjRw3E568'
     })
   ],
   providers: [],

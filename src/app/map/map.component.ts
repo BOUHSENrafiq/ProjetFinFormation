@@ -8,8 +8,8 @@ import {MarkerService} from '../services/marker.service';
 })
 export class MapComponent implements OnInit{
   // map options center and zoom.
-  lat1 = 30.409902;
-  lng1 = -9.548401;
+  lat1 = 30.409902; // longitude
+  lng1 = -9.548401; // latitude
   zoom = 19;
 
   lat = '';
