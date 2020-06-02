@@ -1,11 +1,11 @@
-<div style="height: 100vh;">
+<div >
   <mat-toolbar color="primary">
     <div fxShow="true" fxHide.gt-sm="true">
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
     </div>
-    <a mat-button class="companyName" routerLink="/">
+    <a mat-button class="companyName" [routerLink]="['Home']" routerLinkActive="active">
       <span>TrackCov19</span>
     </a>
     <span class="example-spacer"></span>
@@ -24,7 +24,6 @@
       </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
-      <app-map></app-map>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
