@@ -1,0 +1,38 @@
+div{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  padding: 0;
+  width: 100%;
+}
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background-color: #57a1f5;
+}
+table td{
+  font-weight: bold;
+}
+#recovered{
+  color: #6ba701;
+}
+#deaths{
+  color: red;
+}
+img{
+  width: 12%;
+}
