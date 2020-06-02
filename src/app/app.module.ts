@@ -22,6 +22,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {AgmCoreModule} from '@agm/core';
 import { StatComponent } from './stat/stat.component';
 import { DetailsComponent } from './details/details.component';
+import {ChartsModule} from 'ng2-charts';
+
+
 
 @NgModule({
   declarations: [
@@ -46,6 +49,7 @@ import { DetailsComponent } from './details/details.component';
     RouterModule,
     HttpClientModule,
     AppRoutingModule,
+    ChartsModule,
     AgmCoreModule.forRoot({
       // google maps API key :
       apiKey: 'AIzaSyDGmsIYfiI7sJZu4Et8fhuyfOsjRw3E568'
