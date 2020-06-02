@@ -4,10 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 // import component
 import {MapComponent} from './map/map.component';
 import {StatComponent} from './stat/stat.component';
+import {DetailsComponent} from './details/details.component';
 // url routes
 const routes: Routes = [
   { path: 'Home', component: MapComponent },
   { path: 'Home', component: StatComponent },
+  { path: 'Details', component: DetailsComponent },
 ];
 
 @NgModule({
