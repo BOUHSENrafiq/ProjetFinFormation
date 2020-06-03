@@ -28,6 +28,7 @@
     "@syncfusion/ej2-angular-charts": "^18.1.55",
     "bootstrap": "^4.4.0",
     "chart.js": "^2.9.3",
+    "chartjs-plugin-datalabels": "^0.7.0",
     "ng2-charts": "^2.3.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 // import component
 import {MapComponent} from './map/map.component';
-import {StatComponent} from './stat/stat.component';
 import {DetailsComponent} from './details/details.component';
+import {PiecharttestsdetailsComponent} from './piecharttestsdetails/piecharttestsdetails.component';
 // url routes
 const routes: Routes = [
   { path: 'Home', component: MapComponent},
-  { path: 'Details', component: DetailsComponent},
+  { path: 'Details', component: PiecharttestsdetailsComponent},
 ];
 
 @NgModule({

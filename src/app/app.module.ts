@@ -23,6 +23,8 @@ import {AgmCoreModule} from '@agm/core';
 import { StatComponent } from './stat/stat.component';
 import { DetailsComponent } from './details/details.component';
 import {ChartsModule} from 'ng2-charts';
+import { PiecharttestsdetailsComponent } from './piecharttestsdetails/piecharttestsdetails.component';
+import { TestsTableComponent } from './tests-table/tests-table.component';
 
 
 
@@ -32,7 +34,9 @@ import {ChartsModule} from 'ng2-charts';
     NavbarComponent,
     MapComponent,
     StatComponent,
-    DetailsComponent
+    DetailsComponent,
+    PiecharttestsdetailsComponent,
+    TestsTableComponent
   ],
   imports: [
     BrowserModule,
