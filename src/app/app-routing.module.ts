@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 // import component
 import {MapComponent} from './map/map.component';
-import {DetailsComponent} from './details/details.component';
 import {PiecharttestsdetailsComponent} from './piecharttestsdetails/piecharttestsdetails.component';
 // url routes
 const routes: Routes = [

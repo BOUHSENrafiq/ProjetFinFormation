@@ -31,7 +31,7 @@ export class PiecharttestsdetailsComponent implements OnInit {
     this.statService.getToDayStat().subscribe(data => {
       this.Tested = data.tests;
       this.Confirmed = this.calculService.getRound(this.calculService.getPercentage(data.cases, this.Tested));
-      this.Healthy = data.tests - data.cases;
+      this.Healthy = Math.abs(data.tests - data.cases);
       this.NonAffected = this.calculService.getRound(this.calculService.getPercentage(this.Healthy, this.Tested));
       this.pieChartData = [this.Confirmed, this.NonAffected];
       // show results on console
