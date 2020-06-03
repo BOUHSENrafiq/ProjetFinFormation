@@ -1,16 +1,21 @@
-<div>
-  <agm-map
-    [latitude]="lat1"
-    [longitude]="lng1"
-    [zoom]="zoom"
-    [streetViewControl]="false">
-    <agm-marker
-      *ngFor="let m of marker; let i = index"
-      [latitude]="m.lat"
-      [longitude]="m.lng">
-    </agm-marker>
-  </agm-map>
-</div>
-<div>
-  <app-stat></app-stat>
-</div>
+<section>
+  <div class="row">
+    <div id="map" class="col">
+      <agm-map
+        [latitude]="lat1"
+        [longitude]="lng1"
+        [zoom]="zoom"
+        [streetViewControl]="false">
+        <agm-marker
+          *ngFor="let m of marker; let i = index"
+          [latitude]="m.lat"
+          [longitude]="m.lng">
+        </agm-marker>
+      </agm-map>
+    </div>
+    <div class="col">
+      <app-stat></app-stat>
+      <app-details></app-details>
+    </div>
+  </div>
+</section>

@@ -1,22 +1,28 @@
-<div class="row align-items-lg-start">
-  <img src="{{Flag}}">
-  <h1>{{Country}}</h1>
+<div class="row">
+  <div id="title" class="col">
+    <img src="{{Flag}}">
+    <div class="col">
+      <h1>{{Country}}: Global statistics</h1>
+    </div>
+  </div>
 </div>
-<table style="overflow-x:auto;">
-  <thead>
-  <tr>
-    <th>Today cases</th>
-    <th>Total cases</th>
-    <th>Total Recovered cases</th>
-    <th>Total Deaths</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>{{ToDayCases}}</td>
-    <td>{{Confirmed}}</td>
-    <td id="recovered">{{Recovered}}</td>
-    <td id="deaths">{{Deaths}}</td>
-  </tr>
-  </tbody>
-</table>
+<div>
+  <table style="overflow-x:auto;">
+    <thead>
+    <tr>
+      <th>Today cases</th>
+      <th>Total cases</th>
+      <th>Total Recovered cases</th>
+      <th>Total Deaths</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{ToDayCases}}</td>
+      <td>{{Confirmed}}</td>
+      <td id="recovered">{{Recovered}}</td>
+      <td id="deaths">{{Deaths}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
