@@ -7,7 +7,7 @@ import {StatService} from '../services/stat.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-
+// PIE CHART:
   public pieChartLabels = ['Deaths cases', 'Active cases', 'Recovered cases']; // chart labels
   public pieChartData = []; // chart data
   public pieChartType = 'pie'; // chart type
