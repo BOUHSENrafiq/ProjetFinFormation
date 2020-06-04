@@ -3,7 +3,9 @@
   width:40vw;
   border: 1px solid red;
 }
-
+section{
+  border: 1px dashed black;
+}
 #testTable{
 margin-top: 10px;
 }

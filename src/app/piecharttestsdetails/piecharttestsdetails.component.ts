@@ -2,28 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import {StatService} from '../services/stat.service';
 import {CalculService} from '../services/calcul.service';
 import * as pluginDataLabels from 'chartjs-plugin-datalabels';
+
 @Component({
   selector: 'app-piecharttestsdetails',
   templateUrl: './piecharttestsdetails.component.html',
   styleUrls: ['./piecharttestsdetails.component.css']
 })
 export class PiecharttestsdetailsComponent implements OnInit {
-
   // PIE CHART:
   public pieChartLabels = ['Positive tests', 'Negative tests']; // chart labels
   public pieChartData = []; // chart data
   public pieChartType = 'pie'; // chart type
   public pieChartLegend = true; // chart legend
-  public pieChartColors = [
-    {
-      backgroundColor: ['rgb(255,72,72)', 'rgb(176,246,158)'],
-    },
-  ]; // chart colors
-  public pieChartPlugins = [pluginDataLabels];
-  Tested: number;
-  Confirmed: number;
-  Healthy: number;
-  NonAffected: number;
+  public pieChartColors = [{backgroundColor: ['rgb(255,72,72)', 'rgb(176,246,158)'], }, ]; // chart colors
+  public pieChartPlugins = [pluginDataLabels]; // chart labels
+  Tested: number; // number of tested people
+  Confirmed: number; // percentage of confirmed cases
+  Healthy: number; // number of healthy people = Tested - Confirmed
+  NonAffected: number; // percentage of healthy people
 
   constructor(private statService: StatService, private calculService: CalculService) { }
 
@@ -38,8 +34,8 @@ export class PiecharttestsdetailsComponent implements OnInit {
       console.log(data);
       console.log(this.Tested);
       console.log(this.Healthy);
-      console.log(this.Confirmed); // number%
-      console.log(this.NonAffected); // number%
+      console.log(this.Confirmed);
+      console.log(this.NonAffected);
     });
   }
 }

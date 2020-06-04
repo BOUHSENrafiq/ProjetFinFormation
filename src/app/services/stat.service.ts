@@ -15,4 +15,12 @@ export class StatService {
     const url = 'https://disease.sh/v2/countries/morocco'; // API
     return this.http.get<any>(url);
   }
+
+  /**
+   * get historical data
+   */
+  getHistoricalStat(): Observable<any>{
+    const url = 'https://disease.sh/v2/historical/morocco'; // API
+    return this.http.get<any>(url);
+  }
 }
