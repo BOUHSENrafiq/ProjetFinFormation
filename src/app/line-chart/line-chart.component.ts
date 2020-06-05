@@ -32,17 +32,17 @@ export class LineChartComponent implements OnInit {
     }
   };
   public lineChartColors: Color[] = [
-    { // Grey
+    { // Yellow
       backgroundColor: 'rgba(223,227,238,0.2)',
-      borderColor: 'rgb(255,0,0)',
+      borderColor: 'rgb(252,189,3)',
       pointBackgroundColor: 'rgb(0,0,0)',
       pointBorderColor: '#ffffff',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(148,159,177,0.8)'
     },
-    { // Yellow
+    { // Red
       backgroundColor: 'rgba(223,227,238,0.2)',
-      borderColor: 'rgb(252,189,3)',
+      borderColor: 'rgb(255,0,0)',
       pointBackgroundColor: 'rgb(0,0,0)',
       pointBorderColor: '#ffffff',
       pointHoverBackgroundColor: '#fff',
