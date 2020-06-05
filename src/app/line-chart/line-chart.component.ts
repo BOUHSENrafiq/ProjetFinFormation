@@ -65,7 +65,7 @@ export class LineChartComponent implements OnInit {
   // Recovered
   Recovered: any;
   // labels
-  CasesLabels: any;
+  Labels: any;
 
   constructor(private statService: StatService) {
   }
@@ -75,7 +75,7 @@ export class LineChartComponent implements OnInit {
       this.Cases = Object.values(data.timeline.cases); // get number of cases
       this.Deaths = Object.values(data.timeline.deaths); // get number of deaths
       this.Recovered = Object.values(data.timeline.recovered); // get number of recovered
-      this.CasesLabels = Object.keys(data.timeline.cases); // get labels (dates)
+      this.Labels = Object.keys(data.timeline.cases); // get labels (dates)
       // show results on console
       console.log(data);
       console.log('cases : ' + this.Cases);
