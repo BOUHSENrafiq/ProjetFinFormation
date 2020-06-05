@@ -1,0 +1,14 @@
+<div style="display: block;">
+    <canvas baseChart width="400" height="300"
+            [datasets]="[{ data: this.Cases, label: 'number of cases'},
+                          { data: this.Deaths, label: 'number of deaths'},
+                          { data: this.Recovered, label: 'number of recovered'}
+                          ]"
+            [labels]="this.Labels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType">
+    </canvas>
+</div>
+

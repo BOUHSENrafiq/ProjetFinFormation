@@ -1,0 +1,25 @@
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <div class="row">
+        <div id="canvas" class="col-12">
+          <canvas baseChart
+                  [data]="pieChartData"
+                  [labels]="pieChartLabels"
+                  [chartType]="pieChartType"
+                  [colors]="pieChartColors"
+                  [legend]="pieChartLegend"
+                  [options]="{responsive: true, legend: {position:'left'}}"
+                  [plugins]="pieChartPlugins">
+          </canvas>
+        </div>
+        <div id="testTable" class="col-12">
+          <app-tests-table></app-tests-table>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <app-line-chart></app-line-chart>
+    </div>
+  </div>
+</section>

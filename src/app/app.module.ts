@@ -20,12 +20,25 @@ import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {AgmCoreModule} from '@agm/core';
+import { StatComponent } from './stat/stat.component';
+import { DetailsComponent } from './details/details.component';
+import {ChartsModule} from 'ng2-charts';
+import { PiecharttestsdetailsComponent } from './piecharttestsdetails/piecharttestsdetails.component';
+import { TestsTableComponent } from './tests-table/tests-table.component';
+import { LineChartComponent } from './line-chart/line-chart.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    MapComponent
+    MapComponent,
+    StatComponent,
+    DetailsComponent,
+    PiecharttestsdetailsComponent,
+    TestsTableComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +55,7 @@ import {AgmCoreModule} from '@agm/core';
     RouterModule,
     HttpClientModule,
     AppRoutingModule,
+    ChartsModule,
     AgmCoreModule.forRoot({
       // google maps API key :
       apiKey: 'AIzaSyDGmsIYfiI7sJZu4Et8fhuyfOsjRw3E568'

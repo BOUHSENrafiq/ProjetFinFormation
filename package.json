@@ -25,7 +25,12 @@
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
+    "@syncfusion/ej2-angular-charts": "^18.1.55",
     "bootstrap": "^4.4.0",
+    "chart.js": "^2.9.3",
+    "chartjs-plugin-annotation": "^0.5.7",
+    "chartjs-plugin-datalabels": "^0.7.0",
+    "ng2-charts": "^2.3.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

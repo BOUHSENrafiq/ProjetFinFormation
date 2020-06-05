@@ -1,7 +1,10 @@
 agm-map {
-  height: 300px;
+  height: 100%;
+  width: 100%;
+}
+#map{
   margin-left: 20px;
   margin-top: 20px;
-  width: 50%;
-  float: left;
+  border: 1px dashed black;
 }
+
