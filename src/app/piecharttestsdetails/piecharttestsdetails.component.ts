@@ -8,6 +8,7 @@ import * as pluginDataLabels from 'chartjs-plugin-datalabels';
   templateUrl: './piecharttestsdetails.component.html',
   styleUrls: ['./piecharttestsdetails.component.css']
 })
+
 export class PiecharttestsdetailsComponent implements OnInit {
   // PIE CHART:
   public pieChartLabels = ['Positive tests', 'Negative tests']; // chart labels
@@ -16,6 +17,7 @@ export class PiecharttestsdetailsComponent implements OnInit {
   public pieChartLegend = true; // chart legend
   public pieChartColors = [{backgroundColor: ['rgb(255,72,72)', 'rgb(176,246,158)'], }, ]; // chart colors
   public pieChartPlugins = [pluginDataLabels]; // chart labels
+
   Tested: number; // number of tested people
   Confirmed: number; // percentage of confirmed cases
   Healthy: number; // number of healthy people = Tested - Confirmed
