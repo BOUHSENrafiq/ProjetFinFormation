@@ -10,9 +10,12 @@
     </a>
     <span class="example-spacer"></span>
     <div fxShow="true" fxHide.lt-md="true">
-      <a mat-button [routerLink]="['Home']" routerLinkActive="active" >HOME</a>
-      <a mat-button [routerLink]="['Details']" routerLinkActive="active">DETAILS</a>
-      <a mat-button [routerLink]="['Contact']" routerLinkActive="active">CONTACT US</a>
+      <a mat-button class="nav-link" style="cursor: pointer"  [routerLink]="['Home']" routerLinkActive="active" >HOME</a>
+      <a mat-button class="nav-link" style="cursor: pointer"  [routerLink]="['Details']" routerLinkActive="active">DETAILS</a>
+      <a mat-button class="nav-link" style="cursor: pointer"  [routerLink]="['Contact']" routerLinkActive="active">CONTACT US</a>
+      <a mat-button class="nav-link" style="cursor: pointer" *ngIf="addService.loggedIn()" (click)="logout()">LOG OUT</a>
+      <a mat-button *ngIf="!addService.loggedIn()" [routerLink]="['login']" routerLinkActive="active">LOGIN</a>
+      <a mat-button  *ngIf="!addService.loggedIn()" [routerLink]="['register']" routerLinkActive="active">REGISTER</a>
     </div>
   </mat-toolbar>
   <mat-sidenav-container fxFlexFill class="example-container">
