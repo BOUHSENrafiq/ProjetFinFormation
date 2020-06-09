@@ -2,13 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import {AddService} from '../services/add.service';
 import {Router} from '@angular/router';
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  public registerUserData = {email: '', password: ''}; // public user = { email: '' };
+  public registerUserData = {
+    email: '',
+    password: '',
+  };
   constructor(private addService: AddService, private router: Router) { }
 
   ngOnInit(): void {
@@ -19,7 +23,7 @@ export class RegisterComponent implements OnInit {
         res => {
           console.log(res);
           localStorage.setItem('token', res.token);
-          this.router.navigate(['/login']);
+          this.router.navigate(['/home']);
         },
         err => console.log(err));
     // console.log(this.registerUserData);

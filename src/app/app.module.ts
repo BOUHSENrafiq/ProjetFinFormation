@@ -32,8 +32,9 @@ import {TokenInterceptorService} from './auth/services/token-interceptor.service
 import {LoginComponent} from './auth/login/login.component';
 import {RegisterComponent} from './auth/register/register.component';
 import {FormsModule} from '@angular/forms';
-
-
+import {MarkerService} from './services/marker.service';
+import {CalculService} from './services/calcul.service';
+import {StatService} from './services/stat.service';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import {FormsModule} from '@angular/forms';
       apiKey: 'AIzaSyDGmsIYfiI7sJZu4Et8fhuyfOsjRw3E568'
     }), FormsModule
   ],
-  providers: [AddService,
+  providers: [HttpClientModule, MarkerService, CalculService, StatService , AddService,
     AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
@@ -79,4 +80,5 @@ import {FormsModule} from '@angular/forms';
     }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

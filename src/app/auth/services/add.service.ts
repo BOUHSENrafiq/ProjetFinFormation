@@ -9,9 +9,19 @@ export class AddService {
 private url = 'http://localhost:7777/api/register';
 private loginUrl = 'http://localhost:7777/api/login';
   constructor(private http: HttpClient, private router: Router) { }
+
+  /**
+   * @function [registerUser]
+   * @param user
+   */
   registerUser(user){
     return this.http.post<any>(this.url, user);
   }
+
+  /**
+   * @function [loginUser]
+   * @param user
+   */
   loginUser(user){
     return this.http.post<any>(this.loginUrl, user);
   }
