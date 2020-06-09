@@ -4,7 +4,10 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const db = "mongodb+srv://bouhsen-rafiq:bouhsen@cluster0-daqrv.mongodb.net/userdata?retryWrites=true&w=majority";
 const User = require('../models/user');
-mongoose.connect(db, err => {
+mongoose.connect(db, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+}, err => {
   if (err) {
     console.log('Error' + err)
   } else {
