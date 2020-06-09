@@ -2,13 +2,13 @@ div{
   margin-top: 20px;
   margin-left: 5px;
 }
-table {
+table{
   border: 1px solid #ccc;
   border-collapse: collapse;
   padding: 0;
   width: 100%;
 }
-table tr {
+table tr{
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   padding: .35em;
@@ -18,7 +18,7 @@ table td {
   padding: .625em;
   text-align: center;
 }
-table th {
+table th{
   font-size: .85em;
   letter-spacing: .1em;
   text-transform: uppercase;
