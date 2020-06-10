@@ -1,12 +1,34 @@
 // This file is required by karma.conf.js and loads recursively all the .spec and framework files
 
 import 'zone.js/dist/zone-testing';
-import { getTestBed } from '@angular/core/testing';
+import {getTestBed, TestBed} from '@angular/core/testing';
 import {
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import {RouterTestingModule} from '@angular/router/testing';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {MarkerService} from './app/services/marker.service';
+import {CalculService} from './app/services/calcul.service';
+import {StatService} from './app/services/stat.service';
+import {AddService} from './app/auth/services/add.service';
+import {AuthGuard} from './app/auth.guard';
+import {TokenInterceptorService} from './app/auth/services/token-interceptor.service';
+import {FormBuilder} from '@angular/forms';
+import {ChartModule} from '@syncfusion/ej2-angular-charts';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
+beforeEach(() => TestBed.configureTestingModule({
+  imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([]), ],
+  providers: [HttpClientModule, FormBuilder, ChartModule, MatSidenavModule , MarkerService, CalculService, StatService , AddService,
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }]
+}));
 declare const require: {
   context(path: string, deep?: boolean, filter?: RegExp): {
     keys(): string[];
@@ -22,4 +44,4 @@ getTestBed().initTestEnvironment(
 // Then we find all the tests.
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.
-context.keys().map(context);
+context.keys().forEach(context);

@@ -3,14 +3,13 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CalculService {
-
   constructor() { }
-
   /**
-   * calcul of the percentage
-   * @param {number} a
-   * @param {number} b
+   * @description calcul of the percentage
+   * @param  a is a number
+   * @param  b is a number
    */
   getPercentage(a, b) {
     const result = a * 100 / b;
@@ -18,8 +17,8 @@ export class CalculService {
   }
 
   /**
-   * Precision 2 digits
-   * @param c
+   * @description Precision 2 digits
+   * @param c is a number
    */
   getRound(c){
     return Math.round(c * 100) / 100;

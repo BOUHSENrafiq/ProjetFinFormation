@@ -24,6 +24,12 @@ export class DetailsComponent implements OnInit {
   Recovered: number;
   Deaths: number;
   Active: number;
+
+  /**
+   * @description constructor with private injected services
+   * @param statService instance of StatService
+   * @param calculService instance of CalculService
+   */
   constructor(private statService: StatService, private calculService: CalculService) { }
 
   ngOnInit() {
@@ -33,11 +39,11 @@ export class DetailsComponent implements OnInit {
       this.Deaths = this.calculService.getRound(this.calculService.getPercentage(data.deaths, this.Confirmed));
       this.Active = this.calculService.getRound(this.calculService.getPercentage(data.active, this.Confirmed));
       this.pieChartData = [this.Deaths, this.Active, this.Recovered];
-      // show results on console
-      console.log(data);
-      console.log(this.Recovered);
-      console.log(this.Deaths);
-      console.log(this.Active);
+      // show results on console:
+      // console.log(data);
+      // console.log(this.Recovered);
+      // console.log(this.Deaths);
+      // console.log(this.Active);
     });
   }
 }

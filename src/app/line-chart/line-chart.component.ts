@@ -71,16 +71,15 @@ export class LineChartComponent implements OnInit {
   }
   ngOnInit() {
     this.statService.getHistoricalStat().subscribe(data => {
-      // show results on console
       this.Cases = Object.values(data.timeline.cases); // get number of cases
       this.Deaths = Object.values(data.timeline.deaths); // get number of deaths
       this.Recovered = Object.values(data.timeline.recovered); // get number of recovered
       this.Labels = Object.keys(data.timeline.cases); // get labels (dates)
       // show results on console
-      console.log(data);
-      console.log('cases : ' + this.Cases);
-      console.log('cases : ' + this.Deaths);
-      console.log('cases : ' + this.Recovered);
+      // console.log(data);
+      // console.log('cases : ' + this.Cases);
+      // console.log('cases : ' + this.Deaths);
+      // console.log('cases : ' + this.Recovered);
     });
   }
 }

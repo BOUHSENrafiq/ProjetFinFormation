@@ -17,8 +17,8 @@ export class MapComponent implements OnInit{
   marker: object;
 
   /**
-   * injection of marker service
-   * @param markerService
+   * @description injection of marker service
+   * @param markerService instance of MarkerService
    */
   constructor(
     private markerService: MarkerService) { }
@@ -26,11 +26,11 @@ export class MapComponent implements OnInit{
   ngOnInit(): void {
     // call the function getMarker from the markerService
     this.markerService.getMarker().subscribe(data => {
-      // show data on the console
-      console.log(data);
       this.marker = data;
       this.lng = data.lng;
       this.lat = data.lat;
+       // show data on the console
+      // console.log(data);
     });
   }
 }
