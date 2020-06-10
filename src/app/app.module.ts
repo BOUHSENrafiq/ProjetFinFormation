@@ -36,6 +36,10 @@ import {MarkerService} from './services/marker.service';
 import {CalculService} from './services/calcul.service';
 import {StatService} from './services/stat.service';
 import {MatInputModule} from '@angular/material/input';
+import { ContactComponent } from './contact/contact.component';
+import {ButtonsModule, CardsModule, InputsModule, InputUtilitiesModule, SelectModule, WavesModule} from 'ng-uikit-pro-standard';
+
+
 
 @NgModule({
   declarations: [
@@ -48,7 +52,8 @@ import {MatInputModule} from '@angular/material/input';
     TestsTableComponent,
     LineChartComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -73,9 +78,19 @@ import {MatInputModule} from '@angular/material/input';
     }),
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    SelectModule,
+    CardsModule, WavesModule, InputsModule, InputUtilitiesModule, ButtonsModule,
   ],
-  providers: [HttpClientModule, ChartsModule, MatSidenavModule, FormBuilder, MarkerService, CalculService, StatService , AddService,
+  providers: [
+    HttpClientModule,
+    ChartsModule,
+    MatSidenavModule,
+    FormBuilder,
+    MarkerService,
+    CalculService,
+    StatService ,
+    AddService,
     AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
