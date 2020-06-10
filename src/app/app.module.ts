@@ -31,10 +31,11 @@ import {AddService} from './auth/services/add.service';
 import {TokenInterceptorService} from './auth/services/token-interceptor.service';
 import {LoginComponent} from './auth/login/login.component';
 import {RegisterComponent} from './auth/register/register.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MarkerService} from './services/marker.service';
 import {CalculService} from './services/calcul.service';
 import {StatService} from './services/stat.service';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,7 @@ import {StatService} from './services/stat.service';
     AgmCoreModule.forRoot({
       // google maps API key :
       apiKey: 'AIzaSyDGmsIYfiI7sJZu4Et8fhuyfOsjRw3E568'
-    }), FormsModule
+    }), FormsModule, ReactiveFormsModule, MatInputModule
   ],
   providers: [HttpClientModule, MarkerService, CalculService, StatService , AddService,
     AuthGuard,
