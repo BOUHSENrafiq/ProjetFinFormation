@@ -5,6 +5,7 @@ div{
   float: left;
   border: 2px solid black;
 }
+
 #agmMap {
   height: 300px;
   width: 100%;
