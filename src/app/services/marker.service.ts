@@ -12,15 +12,17 @@ const url = 'http://localhost:3000/marker'; // json-server url
   providedIn: 'root'
 })
 /**
- * injectable marker service
+ * @description injectable marker service
  * @class [export MarkerService]
  */
 export class MarkerService {
-
-  constructor(private http: HttpClient) { }
-
   /**
-   * get markers using json-server as a REST web service
+   * @description where HttpClient service is injected
+   * @param http is an instnace of HttpClient
+   */
+  constructor(private http: HttpClient) { }
+  /**
+   * @description get markers using json-server as a REST web service
    * @method {getMarker}
    */
   getMarker() {

@@ -17,13 +17,13 @@ export class StatComponent implements OnInit {
   ngOnInit(): void {
     // get today statistics.
     this.statService.getToDayStat().subscribe(data => {
-      console.log(data);
       this.Country = data.country;
       this.Flag = data.countryInfo.flag;
       this.ToDayCases = data.todayCases;
       this.Confirmed = data.cases;
       this.Recovered = data.recovered;
       this.Deaths = data.deaths;
+      // console.log(data);
     });
   }
 }

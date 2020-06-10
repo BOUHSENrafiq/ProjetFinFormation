@@ -31,7 +31,7 @@ import {AddService} from './auth/services/add.service';
 import {TokenInterceptorService} from './auth/services/token-interceptor.service';
 import {LoginComponent} from './auth/login/login.component';
 import {RegisterComponent} from './auth/register/register.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormBuilder, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MarkerService} from './services/marker.service';
 import {CalculService} from './services/calcul.service';
 import {StatService} from './services/stat.service';
@@ -70,9 +70,12 @@ import {MatInputModule} from '@angular/material/input';
     AgmCoreModule.forRoot({
       // google maps API key :
       apiKey: 'AIzaSyDGmsIYfiI7sJZu4Et8fhuyfOsjRw3E568'
-    }), FormsModule, ReactiveFormsModule, MatInputModule
+    }),
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
-  providers: [HttpClientModule, MarkerService, CalculService, StatService , AddService,
+  providers: [HttpClientModule, ChartsModule, MatSidenavModule, FormBuilder, MarkerService, CalculService, StatService , AddService,
     AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,

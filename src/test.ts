@@ -15,10 +15,13 @@ import {StatService} from './app/services/stat.service';
 import {AddService} from './app/auth/services/add.service';
 import {AuthGuard} from './app/auth.guard';
 import {TokenInterceptorService} from './app/auth/services/token-interceptor.service';
+import {FormBuilder} from '@angular/forms';
+import {ChartModule} from '@syncfusion/ej2-angular-charts';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 beforeEach(() => TestBed.configureTestingModule({
   imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([]), ],
-  providers: [HttpClientModule, MarkerService, CalculService, StatService , AddService,
+  providers: [HttpClientModule, FormBuilder, ChartModule, MatSidenavModule , MarkerService, CalculService, StatService , AddService,
     AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,

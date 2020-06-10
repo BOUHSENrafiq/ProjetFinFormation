@@ -22,7 +22,11 @@ export class PiecharttestsdetailsComponent implements OnInit {
   Confirmed: number; // percentage of confirmed cases
   Healthy: number; // number of healthy people = Tested - Confirmed
   NonAffected: number; // percentage of healthy people
-
+  /**
+   * @description constuctor where private services are injected
+   * @param statService instance of StatService
+   * @param calculService instance of StatService
+   */
   constructor(private statService: StatService, private calculService: CalculService) { }
 
   ngOnInit() {
@@ -32,12 +36,12 @@ export class PiecharttestsdetailsComponent implements OnInit {
       this.Healthy = Math.abs(data.tests - data.cases);
       this.NonAffected = this.calculService.getRound(this.calculService.getPercentage(this.Healthy, this.Tested));
       this.pieChartData = [this.Confirmed, this.NonAffected];
-      // show results on console
-      console.log(data);
-      console.log(this.Tested);
-      console.log(this.Healthy);
-      console.log(this.Confirmed);
-      console.log(this.NonAffected);
+      // show results on console:
+      // console.log(data);
+      // console.log(this.Tested);
+      // console.log(this.Healthy);
+      // console.log(this.Confirmed);
+      // console.log(this.NonAffected);
     });
   }
 }
