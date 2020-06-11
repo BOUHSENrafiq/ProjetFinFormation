@@ -6,4 +6,4 @@ RUN npm install
 RUN npm run build app
 #stage 2
 FROM nginx:apline
-COPY --FROM=node /app/dist/ProjetFinFormation usr/share/nginx/html
+COPY --from=node /app/dist/ProjetFinFormation usr/share/nginx/html
