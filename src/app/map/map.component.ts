@@ -30,7 +30,7 @@ export class MapComponent implements OnInit{
       this.lng = data.lng;
       this.lat = data.lat;
        // show data on the console
-      // console.log(data);
+      console.log(data);
     });
   }
 }

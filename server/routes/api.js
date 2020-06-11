@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const db = "mongodb+srv://bouhsen-rafiq:bouhsen@cluster0-daqrv.mongodb.net/userdata?retryWrites=true&w=majority";
 const User = require('../models/user');
 const Contact = require('../models/contact');
+const Marker = require('../models/marker');
 mongoose.connect(db, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
@@ -86,5 +87,15 @@ router.post('/contact', (req, res) => {
     }
   )
 })
+
+router.get('/marker', (req, res) => {
+  Marker.find({}, function(err, result) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
 
 module.exports = router;

@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Marker} from '../models/marker';
 
-const url = 'http://localhost:3000/marker'; // json-server url
+const url = 'http://localhost:7777/api/marker'; // json-server url
 @Injectable({
   providedIn: 'root'
 })
