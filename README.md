@@ -4,8 +4,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Backend:
 
-Run `json-server --watch db.json`. 
-
 Under \ProjetFinFormation>server, Run `node server` the server start at port 7777
 
 ## Development server

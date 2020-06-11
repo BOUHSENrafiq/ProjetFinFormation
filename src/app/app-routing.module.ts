@@ -7,11 +7,13 @@ import {PiecharttestsdetailsComponent} from './piecharttestsdetails/piecharttest
 import {AuthGuard} from './auth.guard';
 import {LoginComponent} from './auth/login/login.component';
 import {RegisterComponent} from './auth/register/register.component';
+import {ContactComponent} from './contact/contact.component';
 // url routes
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
-  { path: 'Home', component: MapComponent, canActivate: [AuthGuard]},
-  { path: 'Details', component: PiecharttestsdetailsComponent, canActivate: [AuthGuard]},
+  {path: 'Home', component: MapComponent, canActivate: [AuthGuard]},
+  {path: 'Details', component: PiecharttestsdetailsComponent, canActivate: [AuthGuard]},
+  {path: 'Contact', component: ContactComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
 ];
