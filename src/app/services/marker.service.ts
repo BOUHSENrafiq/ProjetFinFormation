@@ -8,16 +8,19 @@ import { HttpClient } from '@angular/common/http';
 import {Marker} from '../models/marker';
 
 const url = 'http://localhost:7777/api/marker'; // json-server url
+
+// @ts-ignore
 @Injectable({
   providedIn: 'root'
 })
+
 /**
  * @description injectable marker service
  * @class [export MarkerService]
  */
 export class MarkerService {
   /**
-   * @description where HttpClient service is injected
+   * @description constructor where HttpClient service is injected
    * @param http is an instnace of HttpClient
    */
   constructor(private http: HttpClient) { }
